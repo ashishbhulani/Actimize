@@ -26,29 +26,26 @@ gateway_id="${aws_internet_gateway.igw.id}"
 }
 }
 
-resource "aws_route_table" "rtbl1"{
+/*resource "aws_route_table" "rtbl1"{
 vpc_id="${aws_vpc.sample_vpc.id}"
 route{
 cidr_block="0.0.0.0/0"
 }
-}
+}*/
 
 resource "aws_route_table_association" "pubrtbl"{
 subnet_id="${aws_subnet.public-sub.id}"
 route_table_id="${aws_route_table.rtbl.id}"
 }
-resource "aws_route_table_association" "pubrtb2"{
+/*resource "aws_route_table_association" "pubrtb2"{
 subnet_id="${aws_subnet.subnet1.id}"
-route_table_id="${aws_route_table.rtbl1.id}"
 }
 resource "aws_route_table_association" "pubrtb3"{
 subnet_id="${aws_subnet.subnet2.id}"
-route_table_id="${aws_route_table.rtbl1.id}"
 }
 resource "aws_route_table_association" "pubrtb4"{
 subnet_id="${aws_subnet.subnet3.id}"
-route_table_id="${aws_route_table.rtbl1.id}"
-}
+}*/
 resource "aws_subnet" "subnet1"{
 vpc_id="${aws_vpc.sample_vpc.id}"
 cidr_block="${var.prvt_subnet1_cidr}"
