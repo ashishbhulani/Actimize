@@ -4,7 +4,6 @@ instance_type="${var.inst_type}"
 subnet_id="${aws_subnet.public-sub.id}"
 user_data = data.template_file.userdata_win.rendered
 vpc_security_group_ids = ["${aws_security_group.sgrp2.id}"]
-key_name="terrause"
 associate_public_ip_address = "true"
 }
 
