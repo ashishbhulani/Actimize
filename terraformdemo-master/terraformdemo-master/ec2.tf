@@ -29,7 +29,7 @@ echo "" > _INIT_COMPLETE_
 EOF
 }
 
-resource "aws_instance" "pubserver2"{
+/*resource "aws_instance" "pubserver2"{
 ami="${var.ami}"
 instance_type="${var.inst_type}"
 subnet_id="${aws_subnet.public-sub.id}"
@@ -64,5 +64,5 @@ key_name="terrause"
 tags = {
     name = "INSTANCE2"
   }
-} 
+} */
 
