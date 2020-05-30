@@ -11,7 +11,7 @@ tags = {
 resource "aws_subnet" "public-sub"{
 cidr_block="10.0.0.192/26"
 vpc_id="${aws_vpc.sample_vpc.id}"
-availability_zone="us-east-1a"
+availability_zone="us-west-1a"
 }
 
 resource "aws_internet_gateway" "igw"{
