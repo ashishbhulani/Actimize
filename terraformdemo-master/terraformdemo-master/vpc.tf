@@ -30,7 +30,6 @@ resource "aws_route_table" "rtbl1"{
 vpc_id="${aws_vpc.sample_vpc.id}"
 route{
 cidr_block="0.0.0.0/0"
-gateway_id="${aws_nat_gateway.gw.id}"
 }
 }
 
@@ -86,7 +85,7 @@ tags = {
   }
 }*/
  
-resource "aws_eip" "nat" {
+/*resource "aws_eip" "nat" {
   vpc=true
   }
 resource "aws_nat_gateway" "gw" {
@@ -96,7 +95,7 @@ resource "aws_nat_gateway" "gw" {
   tags = {
     Name = "gw NAT"
   }
-}
+}*/
 
 resource "aws_security_group" "sgrp2" {
   name="sgrp2"
