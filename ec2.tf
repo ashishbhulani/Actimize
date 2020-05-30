@@ -17,9 +17,9 @@ echo "" > _INIT_STARTED_
 net user ${var.INSTANCE_USERNAME} /add /y
 net user ${var.INSTANCE_USERNAME} ${var.INSTANCE_PASSWORD}
 net localgroup administrators ${var.INSTANCE_USERNAME} /add
-echo ${base64encode(file("/var/lib/jenkins/workspace/Terraform_AWS_Demo/install-script-chrome.ps1"))} > tmp1.b64 && certutil -decode tmp1.b64 install-script-chrome.ps1
-echo ${base64encode(file("/var/lib/jenkins/workspace/Terraform_AWS_Demo/install-script-Java.ps1"))} > tmp1.b64 && certutil -decode tmp1.b64 install-script-Java.ps1
-echo ${base64encode(file("/var/lib/jenkins/workspace/Terraform_AWS_Demo/install-script-npp.ps1"))} > tmp1.b64 && certutil -decode tmp1.b64 install-script-npp.ps1
+echo ${base64encode(file("C://Program Files (x86)//Jenkins//workspace//actimize2//install-script-chrome.ps1"))} > tmp1.b64 && certutil -decode tmp1.b64 install-script-chrome.ps1
+echo ${base64encode(file("C://Program Files (x86)//Jenkins//workspace//actimize2//install-script-Java.ps1"))} > tmp1.b64 && certutil -decode tmp1.b64 install-script-Java.ps1
+echo ${base64encode(file("C://Program Files (x86)//Jenkins//workspace//actimize2//install-script-npp.ps1"))} > tmp1.b64 && certutil -decode tmp1.b64 install-script-npp.ps1
 powershell.exe -file "C:\setup-scripts\install-script-chrome.ps1"
 powershell.exe -file "C:\setup-scripts\install-script-Java.ps1"
 powershell.exe -file "C:\setup-scripts\install-script-npp.ps1"
