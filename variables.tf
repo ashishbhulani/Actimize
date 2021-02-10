@@ -37,7 +37,7 @@ default="10.192.0.0/11"
 
 
 variable "ami"{
-default="ami-0f1bd3e0f73a95b3"
+default="ami-0f1bd3e0f73a95b37"
 }
 
 variable "dbusername"{
